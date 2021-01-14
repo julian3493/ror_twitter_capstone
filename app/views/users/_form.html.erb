@@ -3,6 +3,8 @@
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
+      
+
       <ul>
         <% user.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -10,6 +12,15 @@
       </ul>
     </div>
   <% end %>
+
+  <%= form.label :username %>
+  <%= form.text_field :username, class: 'form-control' %> <br>
+      
+  <%= form.label :fullname %>
+  <%= form.text_field :fullname, class: 'form-control' %> <br>
+
+  <%= form.label :email %>
+  <%= form.email_field :email, class: 'form-control' %> <br>
 
   <div class="actions">
     <%= form.submit %>

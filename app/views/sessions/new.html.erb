@@ -1,0 +1,10 @@
+<%= form_with url: '/sessions' do |f| %>
+  <%= label_tag(:username, "Please fill in your name:") %>
+  <br>
+  <%= f.text_field(:username, placeholder: 'Name') %>
+  <br>
+  <br>
+  <%= f.submit('Sign In') %>
+<% end %>
+
+<%= link_to 'Back', users_path %>
