@@ -1,25 +1,21 @@
-<p id="notice"><%= notice %></p>
+<%= form_for(@opinion) do |form| %>
+  <%= form.label :content %>
+  <%= form.text_field :content, id: :post_content, class: 'form-control', placeholder: 'Add New Post' %>
+  <%= form.submit 'Save', class: 'btn btn-primary' %>
+<% end %>
 
-<h1>Opinions</h1>
+<article class="timeline">
+  <h3>
+    Recent posts
+  </h3>
+  <ul class="posts">
+    <%= render @opinions %>
+  </ul>
+</article>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @opinions.each do |opinion| %>
-      <tr>
-        <td><%= link_to 'Show', opinion %></td>
-        <td><%= link_to 'Edit', edit_opinion_path(opinion) %></td>
-        <td><%= link_to 'Destroy', opinion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Opinion', new_opinion_path %>
+<div>
+  <h3>Who to follow</h3>
+  <ul>
+    <%= render @not_followed%>
+  </ul>
+</div>
