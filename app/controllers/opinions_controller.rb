@@ -6,6 +6,7 @@ class OpinionsController < ApplicationController
   def index
     @opinion = Opinion.new
     @opinions = Opinion.all
+    @not_followed = User.all
   end
 
   # GET /opinions/1

@@ -10,6 +10,35 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="nav">
+      <%= link_to 'Stay in touch', opinions_path %>
+      <div class="menu">
+        <div class="menu-item">
+          <%= link_to 'Timeline', opinions_path %>
+        </div>
+        <div class="menu-item">
+          <%= link_to 'All users', users_path %>
+        </div>
+      </div>
+      <% if current_user %>
+        <p class="no-wrap"><%= "Welcome #{current_user.username}" %></p>
+        <%= link_to 'Log Out', session_path(session[:username]), method: :delete, class: "button is-primary" %>
+      <% else %>
+        <%= link_to 'Sign in', new_session_path %>
+      <% end %>
+    </nav>
+    <% if notice.present? %>
+      <div class="notice">
+        <p> <%= notice %> </p>
+      </div>
+    <% end %>
+    <% if alert.present? %>
+      <div class="alert">
+        <p> <%= alert %> </p>
+      </div>
+    <% end %>
+    <main class="main">
+      <%= yield %>
+    </main>
   </body>
 </html>
