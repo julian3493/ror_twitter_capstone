@@ -1,10 +1,18 @@
-<%= form_with url: '/sessions' do |f| %>
-  <%= label_tag(:username, "Please fill in your name:") %>
-  <br>
-  <%= f.text_field(:username, placeholder: 'Name') %>
-  <br>
-  <br>
-  <%= f.submit('Sign In') %>
-<% end %>
-
-<%= link_to 'Back', users_path %>
+<section class="section">
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-4">
+				<h2 class="title is-2">Log in</h2>
+          <%= form_with url: '/sessions' do |f| %>
+            <%= label_tag(:username, "Please fill in your username:", class: 'label' ) %>
+            <br>
+            <%= f.text_field(:username, placeholder: 'Username', class: 'input') %>
+            <br>
+            <br>
+            <%= f.submit('Sign In', class: 'button is-primary') %>
+          <% end %>
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
