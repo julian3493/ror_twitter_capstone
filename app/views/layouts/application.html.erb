@@ -11,7 +11,7 @@
 
   <body>
     <% if current_user %>
-    <nav class="navbar">
+    <nav class="navbar bg-blue t-white">
       <div>
         <p class="no-wrap"><%= "Welcome #{current_user.username}" %></p>
         <%= link_to 'Log Out', session_path(session[:username]), method: :delete, class: "button is-primary" %>
