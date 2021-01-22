@@ -34,6 +34,9 @@
   padding-left: 21%;
 }
 
+.t-blue {
+  color: #53a7e7;
+}
 .t-white {
   color: white;
 }
@@ -41,12 +44,27 @@
 form {
   border: 1px lightgray solid;
   padding: 20px 10px;
+  margin-bottom: 20px;
 }
 
 .big-container {
   padding-left: 20%;
   display: flex;
   flex-direction: row;
+  height: 91vh;
+}
+
+.center-section {
+  width: 70%;
+}
+
+.right-section {
+  width: 30%;
+  background-color: #f5f6f8;
+}
+
+.right-section, .center-section {
+  height: 100%;
 }
 
 aside {
