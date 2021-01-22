@@ -13,6 +13,6 @@ class ApplicationController < ActionController::Base
     return if sign_in?
 
     flash[:alert] = 'You must be logged in to perform that action'
-    redirect_to new_user_path
+    redirect_to new_session_path
   end
 end

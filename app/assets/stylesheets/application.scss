@@ -25,6 +25,15 @@
   background-color: #53a7e7;
 }
 
+.bg-dark {
+  background-color: #213346;
+}
+
+.navbar {
+  z-index: 0;
+  padding-left: 21%;
+}
+
 .t-white {
   color: white;
 }
@@ -32,4 +41,18 @@
 form {
   border: 1px lightgray solid;
   padding: 20px 10px;
+}
+
+.big-container {
+  padding-left: 20%;
+  display: flex;
+  flex-direction: row;
+}
+
+aside {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  width: 20%;
 }
