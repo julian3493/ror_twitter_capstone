@@ -7,7 +7,7 @@ class OpinionsController < ApplicationController
   def index
     @opinion = Opinion.new
     @opinions = Opinion.all
-    @not_followed ||= current_user.followings.not_following(current_user)
+    @not_followed ||= User.not_followed(current_user.followeds).all_except(current_user)
   end
 
   # GET /opinions/1
