@@ -29,9 +29,13 @@
   background-color: #213346;
 }
 
-.navbar {
+.navbar, .advices {
   z-index: 0;
   padding-left: 21%;
+}
+
+.notification:not(:last-child) {
+  margin-bottom: 0;
 }
 
 .t-blue {

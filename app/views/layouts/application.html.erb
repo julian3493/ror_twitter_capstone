@@ -11,12 +11,12 @@
 
   <body>
     <% if notice.present? %>
-      <div class="success">
+      <div class='notification is-primary global-notification advices'>
         <p> <%= notice %> </p>
       </div>
     <% end %>
     <% if alert.present? %>
-      <div class="danger">
+      <div class='notification is-danger global-notification advices'>
         <p> <%= alert %> </p>
       </div>
     <% end %>
