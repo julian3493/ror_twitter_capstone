@@ -4,7 +4,7 @@
       <p><%= user.username %></p>
     </div>
     <div class='post-liking'>
-      <span class='post-date'> <%= user.created_at.strftime("%Y/%m/%d") %> </span>
+      <%= link_to 'Follow', follow_user_path(user), method: :post, class: 'profile-link btn btn-secondary' %>
     </div>
   </div>
 </li>

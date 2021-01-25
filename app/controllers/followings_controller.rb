@@ -4,7 +4,7 @@ class FollowingsController < ApplicationController
   end
 
   def create
-    @following = current_user.followings.build(follower_id: params[:id], status: false)
+    @following = Following.new(user_id: params[:id], follower_id: current_user.id)
     if @following.save
       redirect_to root_path, notice: 'You start to follow'
     else

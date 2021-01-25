@@ -1,13 +1,10 @@
 <li class="post">
-  <div>
-    <div class='post-attribution' >
-      <p><%= opinion.user.username %></p>
+  <div class = 'opinion-container'>
+    <div class="opinion-content">
+      <p><%= opinion.content %></p>
     </div>
-    <div class='post-liking'>
-      <span class='post-date'> <%= opinion.created_at.strftime("%Y/%m/%d") %> </span>
+    <div class='opinion-attribution' >
+      <p>Shared by: <%= opinion.user.username %></p>
     </div>
   </div>
-  <p class="post-content">
-    <%= opinion.content %>
-  </p>
 </li>
