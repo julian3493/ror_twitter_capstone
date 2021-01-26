@@ -1,19 +1,29 @@
-<aside class="menu bg-dark">
-  <p class="menu-label">
-    General
-  </p>
-  <ul class="menu-list">
-    <li><a>Dashboard</a></li>
-    <li><a>Customers</a></li>
+<aside class="menu bg-dark t-gray">
+  <div class= 'user-content'>
+    <p class= 'username'>@<%= current_user.username %></p>
+    <div class= 'followings'>
+      <div class= 'follow'>
+        <p><%= current_user.followers.count %></p>
+        <p>Followers</p>
+      </div>
+      <div class= 'follow'>
+        <%= current_user.followeds.count %>
+        <p>Following</p>
+      </div>
+    </div>
+  </div>
+
+  <ul class="menu-list t-gray">
+    <li><%= link_to 'Home', root_path %></li>
   </ul>
 </aside>
 
 <div class = 'big-container'>
   <section class='section center-section'>
     <%= form_for(@opinion) do |form| %>
-      <%= form.label :content %>
-      <%= form.text_field :content, id: :post_content, class: 'form-control', placeholder: 'Add New Post' %>
-      <%= form.submit 'Save', class: 'btn btn-primary' %>
+      <%= label_tag(:content, "Share your opinion:", class: 'label' ) %>
+      <%= form.text_field :content, id: :opinion_content, class: 'form-control', placeholder: 'Write here your opinion' %>
+      <%= form.submit 'Share', class: 'btn btn-primary' %>
     <% end %>
 
     <article class="timeline">

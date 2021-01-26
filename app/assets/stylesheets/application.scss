@@ -41,10 +41,14 @@
 .t-blue {
   color: #53a7e7;
 }
+
 .t-white {
   color: white;
 }
 
+.t-gray {
+  color: #a0adbb;
+}
 form {
   border: 1px lightgray solid;
   padding: 20px 10px;
@@ -81,4 +85,30 @@ aside {
 
 .opinion-container {
   margin-bottom: 15px;
+}
+
+.user-content {
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.username {
+  font-size: 1.2rem;
+  text-transform: lowercase;
+}
+
+.followings {
+  display: flex;
+  flex-direction: row;
+}
+
+.follow {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  
+}
+
+.menu-list a {
+  color: inherit;
 }
