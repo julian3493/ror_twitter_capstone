@@ -2,30 +2,22 @@ class OpinionsController < ApplicationController
   before_action :set_opinion, only: [:show, :edit, :update, :destroy]
   before_action :authenticated?
 
-  # GET /opinions
-  # GET /opinions.json
   def index
     @opinion = Opinion.new
-    @opinions = Opinion.all
-    @not_followed ||= User.not_followed(current_user.followeds).all_except(current_user)
+    @opinions = Opinion.all.ordered_by_most_recent
+    @not_followed ||= User.not_followed(current_user.followeds).all_except(current_user).ordered_by_most_recent
   end
 
-  # GET /opinions/1
-  # GET /opinions/1.json
   def show
   end
 
-  # GET /opinions/new
   def new
     @opinion = Opinion.new
   end
 
-  # GET /opinions/1/edit
   def edit
   end
 
-  # POST /opinions
-  # POST /opinions.json
   def create
     @opinion = current_user.opinions.new(opinion_params)
 
@@ -40,8 +32,6 @@ class OpinionsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /opinions/1
-  # PATCH/PUT /opinions/1.json
   def update
     respond_to do |format|
       if @opinion.update(opinion_params)
