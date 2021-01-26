@@ -92,6 +92,11 @@ aside {
   text-align: center;
 }
 
+.image {
+  width: 100px;
+  margin: 0 auto;
+}
+
 .username {
   font-size: 1.2rem;
   text-transform: lowercase;
@@ -106,9 +111,18 @@ aside {
   display: flex;
   flex-direction: column;
   width: 45%;
-  
 }
 
 .menu-list a {
   color: inherit;
+}
+
+.who-container {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.who-img {
+  width: 80px;
+  margin-right: 10px;
 }

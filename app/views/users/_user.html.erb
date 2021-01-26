@@ -1,10 +1,12 @@
-<li class="post">
-  <div>
-    <div class='post-attribution' >
-      <p><%= user.username %></p>
+<li class="user">
+  <div class= 'who-container'>
+    <div class= 'who-img'>
+      <%= image_tag user.photo %>
     </div>
-    <div class='post-liking'>
-      <%= link_to 'Follow', follow_user_path(user), method: :post, class: 'profile-link btn btn-secondary' %>
+    <div class='who-info' >
+      <p><%= user.username %></p>
+      <p><%= user.followers.count %> followers</p>
+      <p><%= link_to 'Follow', follow_user_path(user), method: :post %></p>
     </div>
   </div>
 </li>

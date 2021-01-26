@@ -1,5 +1,8 @@
 <aside class="menu bg-dark t-gray">
   <div class= 'user-content'>
+    <div class= image>
+      <%= image_tag current_user.photo %>
+    </div>
     <p class= 'username'>@<%= current_user.username %></p>
     <div class= 'followings'>
       <div class= 'follow'>
