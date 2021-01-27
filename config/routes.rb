@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'opinions#index'
 
   resources :users do
-    resources :followings
+    resources :followings, only: [:index, :create, :destory]
     member do
       post 'follow', to: 'followings#create'
     end
