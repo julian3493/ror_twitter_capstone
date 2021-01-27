@@ -49,6 +49,11 @@
 .t-gray {
   color: #a0adbb;
 }
+
+.center {
+  text-align: center;
+}
+
 form {
   border: 1px lightgray solid;
   padding: 20px 10px;
@@ -132,4 +137,8 @@ aside {
   display: flex;
   flex-direction: column;
   width: 30%;
+}
+
+.cover-img {
+  margin: 0 auto 20px auto;
 }

@@ -23,6 +23,9 @@
 
 <div class = 'big-container'>
   <section class='section center-section'>
+    <div class='cover-img'>
+      <%= image_tag @user.cover_img %>
+    </div>
     <article class="timeline">
       <h3 class='title is-4 t-blue'>
         Shared Opinions
@@ -55,7 +58,7 @@
       </div>
     </div>
     <div>
-      <h3 class='title is-4 t-blue'>Followers</h3>
+      <h3 class='title is-4 t-blue center'>Followers</h3>
       <ul>
         <%= render @followers %>
       </ul>
