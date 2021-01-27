@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   before_action :authenticated?, except: [:new, :create]
 
   def index
-    @users = User.all
+    @users = current_user.users
+    @followers = User.u_followers(current_user)
   end
 
   def show
@@ -52,7 +53,7 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
   private
     def set_user
       @user = User.find(params[:id])
