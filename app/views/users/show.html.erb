@@ -34,6 +34,26 @@
   </section>
 
   <section class='section right-section'>
+    <div class= 'user-content'>
+      <div class= image>
+        <%= image_tag @user.photo %>
+      </div>
+      <p class= 'username'>@<%= @user.username %></p>
+      <div class= 'details'>
+        <div class= 'detail'>
+          <p><%= @user.opinions.count %></p>
+          <p>Opinions</p>
+        </div>
+        <div class= 'detail'>
+          <p><%= @user.followers.count %></p>
+          <p>Followers</p>
+        </div>
+        <div class= 'detail'>
+          <%= @user.followeds.count %>
+          <p>Following</p>
+        </div>
+      </div>
+    </div>
     <div>
       <h3 class='title is-4 t-blue'>Followers</h3>
       <ul>

@@ -102,9 +102,10 @@ aside {
   text-transform: lowercase;
 }
 
-.followings {
+.followings, .details {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .follow {
@@ -125,4 +126,10 @@ aside {
 .who-img {
   width: 80px;
   margin-right: 10px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
 }

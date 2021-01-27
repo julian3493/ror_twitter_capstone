@@ -4,10 +4,11 @@
       <%= image_tag user.photo %>
     </div>
     <div class='who-info' >
-      <p><%= user.username %></p>
+      <p><%= link_to user.username, user_path(user) %></p>
       <p><%= user.followers.count %> followers</p>
-      <p><%= link_to 'Follow', follow_user_path(user), method: :post %></p>
-      <% if %>
+      <% unless current_user.users.include?(user) %>
+        <p><%= link_to 'Follow', follow_user_path(user), method: :post %></p>
+      <% end %>
     </div>
   </div>
 </li>
