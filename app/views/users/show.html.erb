@@ -20,3 +20,25 @@
     <li><%= link_to 'Home', root_path %></li>
   </ul>
 </aside>
+
+<div class = 'big-container'>
+  <section class='section center-section'>
+    <article class="timeline">
+      <h3 class='title is-4 t-blue'>
+        Shared Opinions
+      </h3>
+      <ul class="posts">
+        <%= render @user.opinions %>
+      </ul>
+    </article>
+  </section>
+
+  <section class='section right-section'>
+    <div>
+      <h3 class='title is-4 t-blue'>Followers</h3>
+      <ul>
+        <%= render @followers %>
+      </ul>
+    </div>
+  </section>
+</div>

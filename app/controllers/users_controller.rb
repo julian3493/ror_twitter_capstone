@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @followers = User.u_followers(@user)
   end
 
   def new
