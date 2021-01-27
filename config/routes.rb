@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :followings, only: [:index, :create, :destory]
     member do
       post 'follow', to: 'followings#create'
+      delete 'unfollow', to: 'followings#destroy'
     end
   end
   resources :sessions, only: [:new, :create, :destroy]
