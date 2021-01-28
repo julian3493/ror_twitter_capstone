@@ -1,0 +1,70 @@
+<aside class="menu bg-dark t-gray">
+  <div class= 'user-content'>
+    <div class= image>
+      <%= image_tag current_user.photo %>
+    </div>
+    <p class= 'username'>@<%= current_user.username %></p>
+    <div class= 'followings'>
+      <div class= 'follow'>
+        <p><%= current_user.followers.count %></p>
+        <p>Followers</p>
+      </div>
+      <div class= 'follow'>
+        <%= current_user.followeds.count %>
+        <p>Following</p>
+      </div>
+    </div>
+  </div>
+
+  <ul class="menu-list t-gray">
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'Your profile', user_path(current_user) %></li>
+    <li><%= link_to 'Following', users_path %></li>
+  </ul>
+</aside>
+
+<div class = 'big-container'>
+  <section class='section center-section'>
+    <div class='cover-img'>
+      <%= image_tag current_user.cover_img %>
+    </div>
+    <article class="timeline">
+      <h3 class='title is-4 t-blue'>
+        Following
+      </h3>
+      <ul class="posts">
+        <%= render @users %>
+      </ul>
+    </article>
+  </section>
+
+  <section class='section right-section'>
+    <div class= 'user-content'>
+      <div class= image>
+        <%= image_tag current_user.photo %>
+      </div>
+      <p class= 'username'>@<%= current_user.username %></p>
+      <div class= 'details'>
+        <div class= 'detail'>
+          <p><%= current_user.opinions.count %></p>
+          <p>Opinions</p>
+        </div>
+        <div class= 'detail'>
+          <p><%= current_user.followers.count %></p>
+          <p>Followers</p>
+        </div>
+        <div class= 'detail'>
+          <%= current_user.followeds.count %>
+          <p>Following</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3 class='title is-4 t-blue center'>Followers</h3>
+      <ul>
+        <%= render @followers %>
+      </ul>
+    </div>
+  </section>
+</div>
+
