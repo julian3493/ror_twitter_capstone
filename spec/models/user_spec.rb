@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  describe 'check the user name' do
+  describe 'check the username' do
     it 'does not show error if username is valid' do
       user = User.new
       user.username = 'user name'
