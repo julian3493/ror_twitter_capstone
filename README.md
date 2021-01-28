@@ -17,6 +17,9 @@ The page also has a user page that keeps the left side menu of the homepage, in 
 - VS code
 - Rspec
 
+## Live demo
+
+- [live demo](https://sheltered-dawn-42187.herokuapp.com/)
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
