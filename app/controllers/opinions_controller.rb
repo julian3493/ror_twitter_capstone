@@ -5,7 +5,7 @@ class OpinionsController < ApplicationController
   def index
     @opinion = Opinion.new
     @opinions = Opinion.all.ordered_by_most_recent.includes([:user])
-    @not_followed ||= User.not_followed(current_user.followeds).all_except(current_user).ordered_by_most_recent
+    @index ||= User.not_followed(current_user.followeds).all_except(current_user).ordered_by_most_recent
   end
 
   def show; end

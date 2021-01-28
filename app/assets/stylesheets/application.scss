@@ -29,7 +29,8 @@
   background-color: #213346;
 }
 
-.navbar, .advices {
+.navbar,
+.advices {
   z-index: 0;
   padding-left: 21%;
 }
@@ -76,7 +77,8 @@ form {
   background-color: #f5f6f8;
 }
 
-.right-section, .center-section {
+.right-section,
+.center-section {
   height: 100%;
 }
 
@@ -107,7 +109,8 @@ aside {
   text-transform: lowercase;
 }
 
-.followings, .details {
+.followings,
+.details {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
