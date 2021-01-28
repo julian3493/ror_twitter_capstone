@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :opinions, dependent: :destroy
   has_many :followings, dependent: :destroy
 
-  has_many :followeds, class_name: 'Following', foreign_key: 'follower_id'
+  has_many :followeds, class_name: 'Following', foreign_key: 'follower_id', dependent: :destroy
   has_many :followers, class_name: 'Following', foreign_key: 'user_id'
 
   has_many :users, through: :followeds

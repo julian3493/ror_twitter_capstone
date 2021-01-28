@@ -28,7 +28,6 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bulma-rails', '~> 0.9.1'
-gem 'gravatar_image_tag', '~> 1.2'
 gem 'kt-paperclip', '~> 6.4'
 
 group :development, :test do
@@ -40,6 +39,7 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  gem 'bullet', '~> 6.1', '>= 6.1.3'
 end
 
 group :test do
