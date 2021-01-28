@@ -4,9 +4,9 @@
 
 > This project is the capstone project of Ruby on Rails module
 
-The Idea for this project is to create a web app similar to twitter, I followed the [design](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details) given, the project has 3 models, for User, Opinion, and Following. It has a login page where the user can login using only the username. The app has a homepage where the user can see in the left his/her information and some links, in the middle can see all the opinions shared for all the users, and in the right can see the who to follow section where will appear all the users which are not following.
+The Idea for this project is to create a web app similar to twitter, I followed the [design](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details) given, the project has 3 models, User, Opinion, and Following. It has a login page where the user can log in using only the username. The app has a homepage where the user can see in the left his/her information and some links, in the middle can see all the opinions shared for all the users, and in the right can see the who to follow section where will appear all the users which are not following.
 
-The page also have a userpage that keep the left side menu of the homepage, in the middle show all the opinions shared by this user and in the right section shows some details of the user ans the people who follow this user.
+The page also has a user page that keeps the left side menu of the homepage, in the middle show all the opinions shared by this user and in the right section shows some details of the user and the people who follow this user.
 
 ![screenshot](/app/assets/images/Screenshot_1.png)
 
