@@ -10,6 +10,26 @@
   </head>
 
   <body>
-    <%= yield %>
+    <% if notice.present? %>
+      <div class='notification is-primary global-notification advices'>
+        <p> <%= notice %> </p>
+      </div>
+    <% end %>
+    <% if alert.present? %>
+      <div class='notification is-danger global-notification advices'>
+        <p> <%= alert %> </p>
+      </div>
+    <% end %>
+    <% if current_user %>
+    <nav class="navbar bg-blue t-white">
+      <div>
+        <p class="no-wrap"><%= "Welcome #{current_user.username}" %></p>
+        <%= link_to 'Log Out', session_path(session[:username]), method: :delete, class: "button is-primary" %>
+      </div>
+    </nav>
+    <% end %>
+    <main class="main">
+      <%= yield %>
+    </main>
   </body>
 </html>
