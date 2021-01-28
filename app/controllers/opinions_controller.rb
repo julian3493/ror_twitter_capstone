@@ -1,5 +1,5 @@
 class OpinionsController < ApplicationController
-  before_action :set_opinion, only: [:show, :edit, :update, :destroy]
+  before_action :set_opinion, only: %i[show edit update destroy]
   before_action :authenticated?
 
   def index
@@ -8,15 +8,13 @@ class OpinionsController < ApplicationController
     @not_followed ||= User.not_followed(current_user.followeds).all_except(current_user).ordered_by_most_recent
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @opinion = Opinion.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @opinion = current_user.opinions.new(opinion_params)
@@ -55,13 +53,14 @@ class OpinionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_opinion
-      @opinion = Opinion.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def opinion_params
-      params.require(:opinion).permit(:content)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_opinion
+    @opinion = Opinion.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def opinion_params
+    params.require(:opinion).permit(:content)
+  end
 end

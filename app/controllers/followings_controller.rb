@@ -22,4 +22,3 @@ class FollowingsController < ApplicationController
     end
   end
 end
-
