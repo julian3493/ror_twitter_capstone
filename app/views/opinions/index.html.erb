@@ -6,6 +6,10 @@
     <p class= 'username'>@<%= current_user.username %></p>
     <div class= 'followings'>
       <div class= 'follow'>
+        <p><%= current_user.opinions.count %></p>
+        <p>Opinions</p>
+      </div>
+      <div class= 'follow'>
         <p><%= current_user.followers.count %></p>
         <p>Followers</p>
       </div>
