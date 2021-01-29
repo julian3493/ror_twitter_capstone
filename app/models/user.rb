@@ -12,6 +12,6 @@ class User < ApplicationRecord
   has_many :users, through: :followeds
 
   scope :not_followed, ->(query) { where.not(id: query.pluck(:user_id)) }
-  scope :u_followers, ->(user) { where(id: user.followers.pluck(:follower_id)) }
+  scope :user_followers, ->(user) { where(id: user.followers.pluck(:follower_id)) }
   scope :all_except, ->(user) { where.not(id: user) }
 end
