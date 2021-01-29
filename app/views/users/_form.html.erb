@@ -13,14 +13,14 @@
     </div>
   <% end %>
 
-  <%= form.label :username, class: 't-white' %>
-  <%= form.text_field :username, class: 'form-control' %> <br>
-      
-  <%= form.label :fullname, class: 't-white' %>
-  <%= form.text_field :fullname, class: 'form-control' %> <br>
+  <%= label_tag(:username, "Username", class: 'label t-white' ) %>
+  <%= form.text_field(:username, placeholder: 'Username', class: 'input') %> <br><br>
 
-  <%= form.label :email, class: 't-white' %>
-  <%= form.email_field :email, class: 'form-control' %> <br>
+  <%= label_tag(:fullname, "Full Name", class: 'label t-white' ) %>
+  <%= form.text_field(:fullname, placeholder: 'Name', class: 'input') %> <br><br>
+
+  <%= label_tag(:email, "Email", class: 'label t-white' ) %>
+  <%= form.text_field(:email, placeholder: 'Email', class: 'input') %> <br><br>
 
   <div class="actions">
     <%= form.submit('Sign Up', class: 'button bg-blue t-white') %>
