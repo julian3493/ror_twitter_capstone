@@ -20,7 +20,7 @@
         <p> <%= alert %> </p>
       </div>
     <% end %>
-    <% if current_user %>
+    <% if sign_in? %>
     <nav class="navbar bg-blue t-white">
       <div>
         <p class="no-wrap"><%= "Welcome #{current_user.username}" %></p>

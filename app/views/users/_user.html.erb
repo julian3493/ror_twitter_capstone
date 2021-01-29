@@ -6,13 +6,7 @@
     <div class='who-info' >
       <p><%= link_to user.username, user_path(user) %></p>
       <p><%= user.followers.count %> followers</p>
-      <% if current_user.users.include?(user) %>
-        <p><%= link_to 'Unfollow', unfollow_user_path(user), method: :delete %></p>
-      <% elsif current_user == user %>
-        <p></p>
-      <% else %>
-        <p><%= link_to 'Follow', follow_user_path(user), method: :post %></p>
-      <% end %>
+      <p><%= follow_action(user) %>
     </div>
   </div>
 </li>
