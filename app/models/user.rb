@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true, length: { in: 3..20 }
   validates :fullname, presence: true, length: { in: 3..20 }
-  validates :email, presence: true, length: { in: 3..20 }
+  validates :email, presence: true
 
   has_many :opinions, dependent: :destroy
   has_many :followings, dependent: :destroy
