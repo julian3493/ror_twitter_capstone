@@ -4,11 +4,11 @@ class UsersController < ApplicationController
 
   def index
     @users = current_user.users
-    @followers = User.u_followers(current_user)
+    @followers = User.user_followers(current_user)
   end
 
   def show
-    @followers = User.u_followers(@user)
+    @followers = User.user_followers(@user)
   end
 
   def new
