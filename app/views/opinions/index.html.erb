@@ -1,0 +1,27 @@
+<div class = 'big-container'>
+  <section class='section center-section'>
+    <%= form_for(@opinion) do |form| %>
+      <%= label_tag(:content, "Share your opinion:", class: 'label' ) %>
+      <%= form.text_field :content, id: :opinion_content, class: 'form-control', placeholder: 'Write here your opinion' %>
+      <%= form.submit 'Share', class: 'btn btn-primary' %>
+    <% end %>
+
+    <article class="timeline">
+      <h3 class='title is-4 t-blue'>
+        Shared Opinions
+      </h3>
+      <ul class="posts">
+        <%= render @opinions %>
+      </ul>
+    </article>
+  </section>
+
+  <section class='section right-section'>
+    <div>
+      <h3 class='title is-4 t-blue center'>Who to follow</h3>
+      <ul>
+        <%= render @index %>
+      </ul>
+    </div>
+  </section>
+</div>

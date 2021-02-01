@@ -1,0 +1,12 @@
+<li class="user">
+  <div class= 'who-container'>
+    <div class= 'who-img'>
+      <%= image_tag user.photo %>
+    </div>
+    <div class='who-info' >
+      <p><%= link_to user.username, user_path(user) %></p>
+      <p><%= user.followers.count %> followers</p>
+      <p><%= follow_action(user) %>
+    </div>
+  </div>
+</li>

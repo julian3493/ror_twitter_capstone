@@ -1,0 +1,18 @@
+<section class="section">
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-4 bg-blue">
+				<h2 class="title is-2 t-white">Log in</h2>
+          <%= form_with url: '/sessions' do |f| %>
+            <%= label_tag(:username, "Please fill in your username:", class: 'label t-white' ) %>
+            <br>
+            <%= f.text_field(:username, placeholder: 'Username', class: 'input') %>
+            <br>
+            <br>
+            <%= f.submit('Sign In', class: 'button bg-blue t-white') %>
+          <% end %>
+        <p class='t-white'>If you don't have an account you can Sign Up <%= link_to 'here', new_user_path %></p>
+      </div>
+    </div>
+  </div>
+</section>
